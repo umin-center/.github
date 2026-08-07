@@ -1,0 +1,43 @@
+name: 質問・その他 / Question or other
+description: 公開ソフトウェアに関するご質問など、上記に当てはまらない場合はこちら / For questions about published software, or anything that does not fit the templates above
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > **UMIN が運用しているサービス（UMIN ID・メール・UMIN-CTR・INDICE・EPOC など）のご利用に関するお問い合わせには、ここではお答えできません。**
+        > [UMIN お問い合わせ窓口](https://www.umin.ac.jp/faq/) をご利用ください。
+        >
+        > **Questions about using the services UMIN operates cannot be answered here.** Please use the [UMIN inquiry form](https://center9.umin.ac.jp/inquiry/en/other/input/).
+
+        脆弱性に関するご報告は、この Issue ではなく github@umin.ac.jp へメールでお願いします。
+        Please report security vulnerabilities by email to github@umin.ac.jp, not here.
+
+        日本語・英語のどちらでもご記入いただけます。 / You may write in Japanese or English.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: ご質問・ご連絡の内容 / Your question
+      description: できるだけ具体的にご記入ください。対象のリポジトリ・バージョンがお分かりでしたらあわせてご記入ください。 / Please be as specific as you can, and include the repository and version if you know them.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 補足 / Additional context
+      description: すでにお試しになったこと、参照された資料などがあればご記入ください / Anything you have already tried, or documentation you have consulted
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項 / Confirmation
+      options:
+        - label: 記載内容に個人情報・患者情報・認証情報が含まれていないことを確認しました / I have confirmed that this contains no personal data, patient data, or credentials
+          required: true
+        - label: これは UMIN の運用サービスに関するお問い合わせではありません / This is not an inquiry about UMIN's operational services
+          required: true

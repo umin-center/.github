@@ -1,0 +1,84 @@
+name: 不具合の報告 / Bug report
+description: 本 Organization で公開しているソフトウェアの不具合をご報告ください / Report a bug in software published by this organization
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > **脆弱性のご報告は、この Issue ではなく github@umin.ac.jp へメールでお願いします。**
+        > 公開の場に投稿された内容は、修正が提供される前に第三者の目に触れ、悪用される可能性があります。詳細は [SECURITY.md](https://github.com/umin-center/.github/blob/main/SECURITY.md) をご確認ください。
+        >
+        > **Please report security vulnerabilities by email to github@umin.ac.jp, not in a public issue.**
+
+        UMIN が運用しているサービス（UMIN ID・メール・UMIN-CTR・INDICE など）のご利用に関するお問い合わせは、この Issue トラッカーではなく [UMIN お問い合わせ窓口](https://www.umin.ac.jp/faq/) をご利用ください。
+
+        日本語・英語のどちらでもご記入いただけます。すべての項目が埋まらなくても構いません。
+        You may write in Japanese or English. You do not need to fill in everything you are unsure about.
+
+  - type: input
+    id: version
+    attributes:
+      label: バージョン / Version
+      description: リリース番号・タグ・コミットハッシュなど / Release number, tag, or commit hash
+      placeholder: "例 / e.g. v1.2.0, 90a1892"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 発生した事象 / What happened
+      description: 実際に起きたことをご記入ください / Describe what actually happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待した動作 / Expected behaviour
+      description: 本来どうなるべきだったかをご記入ください / Describe what you expected to happen instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順 / Steps to reproduce
+      description: 再現に必要な条件もあわせてご記入ください / Include any conditions required to reproduce the issue
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 動作環境 / Environment
+      description: OS・実行環境・依存ライブラリのバージョン・データベース種別など / OS, runtime, dependency versions, database, and so on
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ・スクリーンショット等の参考情報 / Logs, screenshots, or other supporting material
+      description: |
+        投稿前に、**個人情報・患者情報・認証情報（パスワード、トークン、接続文字列、証明書など）が含まれていないこと**を必ずご確認ください。
+        Before posting, please make sure that no personal data, patient data, or credentials are included.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項 / Confirmation
+      options:
+        - label: 記載内容に個人情報・患者情報・認証情報が含まれていないことを確認しました / I have confirmed that this report contains no personal data, patient data, or credentials
+          required: true
+        - label: これは UMIN の運用サービスに関するお問い合わせではなく、公開ソフトウェアの不具合報告です / This is a bug report about published software, not an inquiry about UMIN's operational services
+          required: true
+        - label: これは脆弱性の報告ではありません（脆弱性は github@umin.ac.jp へメールでご報告ください） / This is not a security vulnerability report (please email github@umin.ac.jp for those)
+          required: true

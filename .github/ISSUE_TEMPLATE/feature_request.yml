@@ -1,0 +1,54 @@
+name: 機能のご提案 / Feature request
+description: 公開ソフトウェアへの機能追加・改善をご提案ください / Suggest a feature or improvement for software published here
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        UMIN が運用しているサービス（UMIN ID・メール・UMIN-CTR・INDICE など）へのご要望は、この Issue トラッカーではなく [UMIN お問い合わせ窓口](https://www.umin.ac.jp/faq/) をご利用ください。ここは**公開ソフトウェアのソースコード**に関する場所です。
+
+        Requests concerning the services UMIN operates should go to the [UMIN inquiry form](https://center9.umin.ac.jp/inquiry/en/other/input/), not here. This tracker is for the published source code.
+
+        日本語・英語のどちらでもご記入いただけます。 / You may write in Japanese or English.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題 / The problem you want to solve
+      description: どのような場面で、何にお困りかをご記入ください。実現方法より先に、課題そのものをお聞かせください。 / Describe the situation and the difficulty you are facing, rather than jumping to a solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: ご提案の内容 / Proposed change
+      description: どのような機能・変更をご希望かをご記入ください / Describe the feature or change you would like to see
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 検討した代替案 / Alternatives you have considered
+      description: 既存機能や運用上の回避策で対応できるかを検討された場合は、その内容をご記入ください / If you considered existing features or workarounds, please describe them
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 補足 / Additional context
+      description: 関連する規制・標準（CDISC、GCP など）、想定される利用者、参考実装などがあればご記入ください / Related regulations or standards (CDISC, GCP, and so on), expected users, or reference implementations
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 確認事項 / Confirmation
+      options:
+        - label: 記載内容に個人情報・患者情報・認証情報が含まれていないことを確認しました / I have confirmed that this request contains no personal data, patient data, or credentials
+          required: true
+        - label: これは UMIN の運用サービスへの要望ではなく、公開ソフトウェアへのご提案です / This is a proposal for published software, not a request concerning UMIN's operational services
+          required: true

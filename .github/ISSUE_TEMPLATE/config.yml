@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: UMIN サービスのお問い合わせ（UMIN ID・メール・UMIN-CTR・INDICE など）
+    url: https://www.umin.ac.jp/faq/
+    about: UMIN が運用しているサービスのご利用に関するお問い合わせは、こちらの窓口へお願いします。この Issue トラッカーは公開ソフトウェア専用です。
+  - name: Inquiries about UMIN services (UMIN ID, email, UMIN-CTR, INDICE, etc.)
+    url: https://center9.umin.ac.jp/inquiry/en/other/input/
+    about: For questions about using the services UMIN operates, please use the UMIN inquiry form. This issue tracker is only for published software.
+  - name: 脆弱性のご報告 / Reporting a security vulnerability
+    url: https://github.com/umin-center/.github/blob/main/SECURITY.md
+    about: 脆弱性は公開の Issue に投稿せず github@umin.ac.jp へご報告ください。Please email github@umin.ac.jp instead of opening a public issue.
+  - name: その他のご連絡 / Other inquiries
+    url: https://github.com/umin-center
+    about: 本 Organization および公開ソフトウェアに関するその他のご連絡先は github@umin.ac.jp です。
